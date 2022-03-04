@@ -83,13 +83,69 @@ top blogs style
     color: rgb(99, 60, 179);
 }
 /* courses styles */
+.courses{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 24px;
+}
+.course{
+    width:224.5px;
+    height:280px;
+    border: 1px solid gray;
+    margin: 5px;
+    border-radius: 5px;
+    padding: 2px;
+}
 .course .course-banner img{
     width:224px;
     height: 104px;
+}
+.course-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .fa-star.filled{
     color: gold;
 }
 .fa-star.empty{
     color: gainsboro;
+}
+.course-duration{
+    border: 1px solid gray;
+    border-style: hidden;
+    border-radius: 9px;
+    background-color: pink;
+    color: red;
+}
+/* media queries */
+
+/* Mobile Devices */
+@media only screen and (max-width:688px) {
+    .container{
+        width:100%;
+    }
+    .players, .blogs, .courses {
+
+   
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+    .player, .blog{
+        flex-direction: column;
+    }
+    
+    
+}
+/* tablet devices */
+@media only screen and (min-width:688px) and (max-width:992px) {
+    .container{
+        width: 100%;
+    }
+    .players, .courses{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .blogs{
+        grid-template-columns: repeat(1,1fr);
+    }
 }
